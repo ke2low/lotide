@@ -11,13 +11,16 @@ const eqArrays = function(arr1, arr2) {
   if (arr1.length != arr2.length) {
     return false;
   }
+  else if (arr1.length == 0 && arr2.length == 0)  {
+    return true;
+  }
   else {
     for (let i = 0; i < arr1.length; i++) {
-      // console.log (arr1[i] + " " + arr2[i])
+      console.log (arr1[i] + " " + arr2[i])
       if (arr1[i] != arr2[i]) {
         return false;
       }
-      else if (i == arr1.length - 1 && (arr1[i] === arr2[i])) {
+      else if ((i == arr1.length - 1 && (arr1[i] === arr2[i]))) {
         return true;
       }
     }
@@ -25,7 +28,7 @@ const eqArrays = function(arr1, arr2) {
 }
 
 const middle = function(arr)  {
-  if (arr.length <= 2)  {
+  if (arr.length <= 1)  {
     return [];
   }
   else if (arr.length % 2 == 0) {
@@ -40,3 +43,4 @@ const middle = function(arr)  {
 // Test Code
 assertArraysEqual(middle([1, 2, 4, 5, 7, 8, 9, 10]), [5,7]) // should return true
 assertArraysEqual(middle([1, 2, 4, 5, 8, 9, 10]), [5]) // should return true
+assertArraysEqual(middle([1]), []) 
