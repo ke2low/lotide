@@ -11,8 +11,8 @@ const countLetters = function(str) {
   const letterCount = {};
   let spacelessStr = str.split(" ").join("");
   let letterArr = spacelessStr.split("");
-  console.log(spacelessStr);
-  console.log(letterArr);
+  // console.log(spacelessStr);
+  // console.log(letterArr);
   for (const letters of letterArr)  {
     if (letterCount[letters] != undefined)  {
       letterCount[letters] += 1;
