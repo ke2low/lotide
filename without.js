@@ -1,4 +1,4 @@
-let newArr;
+// let newArr;
 
 const assertArraysEqual = function(arr1, arr2)  {
   if (eqArrays(arr1, arr2)) {
@@ -18,7 +18,7 @@ const eqArrays = function(arr1, arr2) {
   }
   else {
     for (let i = 0; i < arr1.length; i++) {
-      console.log (arr1[i] + " " + arr2[i])
+      // console.log (arr1[i] + " " + arr2[i])
       if (arr1[i] != arr2[i]) {
         return false;
       }
@@ -30,6 +30,7 @@ const eqArrays = function(arr1, arr2) {
 }
 
 const without = function(source, itemsToRemove) {
+  let newArr;
   newArr = source;
   for (let x = 0; x < itemsToRemove.length; x++)  {
     for (let i = 0; i < newArr.length; i++) {
@@ -38,7 +39,7 @@ const without = function(source, itemsToRemove) {
       }
     }
   }
-  console.log(newArr);
+  // console.log(newArr);
   return newArr;
 }
 
